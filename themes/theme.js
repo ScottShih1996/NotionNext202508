@@ -4,8 +4,8 @@ import getConfig from 'next/config'
 import dynamic from 'next/dynamic'
 import { useRouter } from 'next/router'
 import { getQueryParam, getQueryVariable, isBrowser } from '../lib/utils'
-
-// 在next.config.js中扫描所有主题
+import pangu from 'pangu'
+// 在 next.config.js 中扫描所有主题
 export const { THEMES = [] } = getConfig()?.publicRuntimeConfig || {}
 
 /**
@@ -103,7 +103,10 @@ export const useLayoutByTheme = ({ layoutName, theme }) => {
     const loadThemeComponents = componentsSource => {
       const components =
         componentsSource[layoutName] || componentsSource.LayoutSlug
-      setTimeout(fixThemeDOM, 500)
+      setTimeout(() => {
+        fixThemeDOM()
+        BLOG.FORMAT && pangu.autoSpacingPage()
+      }, 500)
       return components
     }
     return dynamic(
@@ -112,12 +115,15 @@ export const useLayoutByTheme = ({ layoutName, theme }) => {
     )
   }
 
-  setTimeout(fixThemeDOM, 100)
+  setTimeout(() => {
+    fixThemeDOM()
+    BLOG.FORMAT && pangu.autoSpacingPage()
+  }, 100)
   return LayoutComponents
 }
 
 /**
- * 根据路径 获取对应的layout名称
+ * 根据路径 获取对应的 layout 名称
  * @param {*} path
  * @returns
  */
@@ -159,7 +165,7 @@ export const initDarkMode = (updateDarkMode, defaultDarkMode) => {
   // 查看用户设备浏览器是否深色模型
   let newDarkMode = isPreferDark()
 
-  // 查看localStorage中用户记录的是否深色模式
+  // 查看 localStorage 中用户记录的是否深色模式
   const userDarkMode = loadDarkModeFromLocalStorage()
   if (userDarkMode) {
     newDarkMode = userDarkMode === 'dark' || userDarkMode === 'true'
@@ -171,7 +177,7 @@ export const initDarkMode = (updateDarkMode, defaultDarkMode) => {
     newDarkMode = true
   }
 
-  // url查询条件中是否深色模式
+  // url 查询条件中是否深色模式
   const queryMode = getQueryVariable('mode')
   if (queryMode) {
     newDarkMode = queryMode === 'dark'
@@ -184,7 +190,7 @@ export const initDarkMode = (updateDarkMode, defaultDarkMode) => {
 }
 
 /**
- * 是否优先深色模式， 根据系统深色模式以及当前时间判断
+ * 是否优先深色模式，根据系统深色模式以及当前时间判断
  * @returns {*}
  */
 export function isPreferDark() {
