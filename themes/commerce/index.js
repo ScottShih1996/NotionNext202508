@@ -73,7 +73,7 @@ const LayoutBase = props => {
       {/* 主区块 */}
       <main
         id='wrapper'
-        className={`${CONFIG.HOME_BANNER_ENABLE ? '' : 'pt-16'} bg-hexo-background-gray dark:bg-black w-full py-8 md:px-8 lg:px-24 relative`}>
+        className={`${CONFIG.HOME_BANNER_ENABLE ? '' : ''} bg-hexo-background-gray dark:bg-black w-full py-2 px-5 md:px-8 lg:px-24 relative`}>
         <div
           id='container-inner'
           className={
@@ -124,19 +124,18 @@ const LayoutIndex = props => {
   const { notice } = props
   return (
     <>
-      {/* 产品中心 */}
-      <ProductCenter {...props} />
 
-      {/* 首页企业/品牌介绍 这里展示公告 */}
+    {/* 首页企业/品牌介绍 这里展示公告 */}
       {notice && (
-        <div id='brand-introduction' className='w-full'>
-          <div className='w-full text-center text-4xl font-bold pt-12'>
-            {notice.title}
-          </div>
-          <NotionPage post={notice} className='text-2xl text-justify' />
+        <div id='brand-introduction' className='dark:text-gray-300 mx-auto overflow-hidden'>
+          <NotionPage post={notice} className='w-full px-6 pb-6 md:pb-20 max-w-8xl justify-center mx-auto notion light-mode notion-page notion-block-af419cf3882844f5a91d07b7ab328101' />
         </div>
       )}
-
+  
+      <OneADNativeDrive />
+      {/* 产品中心 */}
+      <ProductCenter {...props} />
+  
       {/* 铺开导航菜单 */}
     </>
   )
