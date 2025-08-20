@@ -132,7 +132,6 @@ const LayoutIndex = props => {
         </div>
       )}
   
-      <OneADNativeDrive />
       {/* 产品中心 */}
       <ProductCenter {...props} />
   
