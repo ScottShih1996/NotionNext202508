@@ -248,28 +248,28 @@ const LayoutSlug = props => {
           <div
             id='article-wrapper'
             className='overflow-x-auto flex-grow mx-auto md:w-full md:px-5 '>
-            {/* 预览区块 */}
-
-            {post?.type === 'Post' && (
-              <div className='flex md:flex-row flex-col w-full justify-between py-4'>
-                <div
-                  id='left-img'
-                  className='md:w-1/2 flex justify-center items-center border'>
-                  <LazyImage
-                    src={headerImage}
-                    className='m-auto w-full h-auto aspect-square object-cover object-center'
-                  />
-                </div>
-
-                <div id='info-right' className='md:w-1/2 p-4'>
-                  <div>{post?.title}</div>
-                  <div
-                    dangerouslySetInnerHTML={{ __html: post?.summary }}></div>
-                </div>
-              </div>
-            )}
-
-            <hr className='border-2 border-[#D2232A]' />
+//            {/* 预览区块 */}
+//
+//            {post?.type === 'Post' && (
+//              <div className='flex md:flex-row flex-col w-full justify-between py-4'>
+//                <div
+//                  id='left-img'
+//                  className='md:w-1/2 flex justify-center items-center border'>
+//                  <LazyImage
+//                    src={headerImage}
+//                    className='m-auto w-full h-auto aspect-square object-cover object-center'
+//                  />
+//                </div>
+//
+//                <div id='info-right' className='md:w-1/2 p-4'>
+//                  <div>{post?.title}</div>
+//                  <div
+//                    dangerouslySetInnerHTML={{ __html: post?.summary }}></div>
+//                </div>
+//              </div>
+//            )}
+//
+//            <hr className='border-2 border-[#D2232A]' />
 
             <article
               itemScope
