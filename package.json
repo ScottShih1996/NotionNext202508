@@ -47,8 +47,8 @@
     "react-hotkeys-hook": "^4.5.0",
     "react-notion-x": "7.3.0",
     "react-share": "^5.2.2",
-    "react-tweet-embed": "~2.0.0"
-    "@vercel/analytics": "latest"
+    "react-tweet-embed": "~2.0.0",
+    "@vercel/analytics": "latest",
     "@vercel/speed-insights": "latest"
   },
   "devDependencies": {
