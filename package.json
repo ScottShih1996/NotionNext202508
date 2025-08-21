@@ -48,6 +48,8 @@
     "react-notion-x": "7.3.0",
     "react-share": "^5.2.2",
     "react-tweet-embed": "~2.0.0"
+    "@vercel/analytics": "latest"
+    "@vercel/speed-insights": "latest"
   },
   "devDependencies": {
     "@types/node": "22.15.3",
@@ -71,8 +73,6 @@
     "tailwindcss": "^3.3.2",
     "typescript": "5.6.2",
     "webpack-bundle-analyzer": "^4.5.0"
-    "@vercel/analytics": "latest"
-    "@vercel/speed-insights": "latest"
   },
   "resolutions": {
     "axios": ">=0.21.1"
