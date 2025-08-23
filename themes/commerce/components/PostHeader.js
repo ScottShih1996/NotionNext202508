@@ -33,13 +33,16 @@ export default function PostHeader({ post }) {
           <div className="leading-snug font-bold xs:text-4xl sm:text-4xl md:text-5xl md:leading-snug text-4xl shadow-text-md flex justify-center text-center text-white">
             {siteConfig('POST_TITLE_ICON') && <NotionIcon icon={post.pageIcon} className='text-4xl mx-1' />}<div className='text-4xl mx-1'>{post.title}</div>
           </div>
-         
+          
+          <div>
             {ANALYTICS_BUSUANZI_ENABLE && (
               <div className='hidden busuanzi_container_page_pv'>
                 <i className='fas fa-eye mr-1' />
                 <span className='busuanzi_value_page_pv' />
               </div>
               )}
+           </div>
+                
         </div>
       </header>
     </div>
