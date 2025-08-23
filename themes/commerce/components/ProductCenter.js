@@ -31,7 +31,7 @@ export default function ProductCenter(props) {
 
         <div className='w-full px-4'>
           {/* 文章列表 */}
-          <div className='grid md:grid-cols-5 grid-cols-3 gap-5'>
+          <div className='grid md:grid-cols-4 grid-cols-2 gap-5'>
             {posts?.map(post => (
               <ProductCard
                 index={posts.indexOf(post)}
