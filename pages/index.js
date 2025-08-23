@@ -7,6 +7,7 @@ import { generateSitemapXml } from '@/lib/sitemap.xml'
 import { DynamicLayout } from '@/themes/theme'
 import { generateRedirectJson } from '@/lib/redirect'
 import { checkDataFromAlgolia } from '@/lib/plugins/algolia'
+import FloatingWindow from '@/components/FloatingWindow'
 
 /**
  * 首页布局
@@ -15,7 +16,12 @@ import { checkDataFromAlgolia } from '@/lib/plugins/algolia'
  */
 const Index = props => {
   const theme = siteConfig('THEME', BLOG.THEME, props.NOTION_CONFIG)
-  return <DynamicLayout theme={theme} layoutName='LayoutIndex' {...props} />
+  return (
+    <>
+      <FloatingWindow />
+      <DynamicLayout theme={theme} layoutName='LayoutIndex' {...props} />
+    </>
+  )
 }
 
 /**
