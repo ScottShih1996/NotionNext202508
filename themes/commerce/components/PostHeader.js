@@ -34,7 +34,7 @@ export default function PostHeader({ post }) {
             {siteConfig('POST_TITLE_ICON') && <NotionIcon icon={post.pageIcon} className='text-4xl mx-1' />}<div className='text-4xl mx-1'>{post.title}</div>           
           </div>
    
-          <div className='justify-center text-white'>       
+          <div className='justify-center text-white margin-inline'>       
           {ANALYTICS_BUSUANZI_ENABLE && (
               <div className='hidden busuanzi_container_page_pv'>
                 <i className='fas fa-eye mr-1' />
