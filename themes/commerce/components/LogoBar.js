@@ -12,7 +12,7 @@ export default function LogoBar (props) {
   return (
     <div id='top-wrapper' className='w-full flex items-center'>
           <SmartLink href='/' className='text-md md:text-xl dark:text-gray-200 r'>
-            <LazyImage className='h-6 md:h-8 mr-3' src={siteInfo?.icon}/>
+            <LazyImage className='h-6 md:h-8 mr-6' src={siteInfo?.icon}/>
           </SmartLink>
           {/* <div>{siteConfig('TITLE')}</div> */}
     </div>
