@@ -27,6 +27,8 @@ import SlotBar from './components/SlotBar'
 import TagItemMini from './components/TagItemMini'
 import TocDrawer from './components/TocDrawer'
 import { Style } from './style'
+import FloatingWindow from '@/components/FloatingWindow'
+
 
 /**
  * 基础布局 采用左右两侧布局，移动端使用顶部导航栏
@@ -133,6 +135,7 @@ const LayoutIndex = props => {
       )}
   
       {/* 产品中心 */}
+      <FloatingWindow />
       <ProductCenter {...props} />
   
       {/* 铺开导航菜单 */}
