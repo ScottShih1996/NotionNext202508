@@ -17,11 +17,9 @@ import FloatingWindow from '@/components/FloatingWindow'
 const Index = props => {
   const theme = siteConfig('THEME', BLOG.THEME, props.NOTION_CONFIG)
   return (
-    <>
       <FloatingWindow />
       <DynamicLayout theme={theme} layoutName='LayoutIndex' {...props} />
-    </>
-  )
+      )
 }
 
 /**
