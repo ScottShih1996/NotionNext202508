@@ -8,6 +8,14 @@ import { DynamicLayout } from '@/themes/theme'
 import { generateRedirectJson } from '@/lib/redirect'
 import { checkDataFromAlgolia } from '@/lib/plugins/algolia'
 
+import dynamic from 'next/dynamic'
+
+const FloatingWindow = dynamic(
+  () => import('@/components/FloatingWindow'),
+  { ssr: false }
+)
+
+
 /**
  * 首页布局
  * @param {*} props
@@ -15,7 +23,12 @@ import { checkDataFromAlgolia } from '@/lib/plugins/algolia'
  */
 const Index = props => {
   const theme = siteConfig('THEME', BLOG.THEME, props.NOTION_CONFIG)
-  return  <DynamicLayout theme={theme} layoutName='LayoutIndex' {...props} />
+  return (
+    <>
+      <FloatingWindow />
+      <DynamicLayout theme={theme} layoutName='LayoutIndex' {...props} />
+    </>
+  )
 }
 
 /**
