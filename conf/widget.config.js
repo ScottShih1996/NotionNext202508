@@ -16,9 +16,9 @@ module.exports = {
 
   // Notion 浮窗配置
   FLOATING_WINDOW_ENABLED:
-    process.env.NEXT_PUBLIC_FLOATING_WINDOW_ENABLED || false,
+    process.env.NEXT_PUBLIC_FLOATING_WINDOW_ENABLED || true,
   FLOATING_WINDOW_PAGE_ID:
-    process.env.NEXT_PUBLIC_FLOATING_WINDOW_PAGE_ID || '',
+    process.env.NEXT_PUBLIC_FLOATING_WINDOW_PAGE_ID || 'cmuhdnrupdate',
 
   
   // 悬浮挂件
