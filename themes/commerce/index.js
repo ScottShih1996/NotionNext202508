@@ -141,9 +141,8 @@ const LayoutIndex = props => {
       {latestPosts && latestPosts.length > 0 && (
         <div className='bg-white border-[#D2232A] p-4 mt-6'>
           <div className='mb-4 text-xl'>
-            <i className='fas fa-history font-bold text-lg mb-4 border-b-2 py-2 border-[#D2232A]'>
+            <i className='fas fa-history font-bold text-lg mb-4'>
             {locale.COMMON.RECENT_POSTS}
-            </>
           </div>
           {siteConfig('POST_LIST_STYLE') === 'page' ? (
             <BlogPostListPage
