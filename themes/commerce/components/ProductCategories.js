@@ -6,7 +6,7 @@ export default function ProductCategories(props) {
   const { categoryOptions } = props
 
   return (
-    <div className='hidden md:block w-72 mx-2'>
+    <div className='hidden md:block w-36 mx-2'>
       {/* 分类菜单  */}
       <div className='bg-white  p-4'>
         <div className='font-bold text-lg mb-4 border-b-2 py-2 border-[#D2232A]'>
