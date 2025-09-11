@@ -123,7 +123,8 @@ const LayoutBase = props => {
  * @returns
  */
 const LayoutIndex = props => {
-  const { notice } = props
+  const { notice, latestPosts } = props
+  const { locale } = useGlobal()
   return (
     <>
 
@@ -137,7 +138,27 @@ const LayoutIndex = props => {
       {/* 产品中心 */}
       <FloatingWindow />
       <ProductCenter {...props} />
-  
+
+      {/* 最近新增的文章 */}
+      {latestPosts && latestPosts.length > 0 && (
+        <div className='bg-white border-[#D2232A] p-4 mt-6'>
+          <div className='mb-4 text-xl'>
+            <i className='fas fa-history mr-2' />
+            {locale.COMMON.RECENT_POSTS}
+          </div>
+          {siteConfig('POST_LIST_STYLE') === 'page' ? (
+            <BlogPostListPage
+              {...props}
+              posts={latestPosts}
+              postCount={latestPosts.length}
+            />
+          ) : (
+            <BlogPostListScroll {...props} posts={latestPosts} />
+          )}
+        </div>
+      )}
+
+
       {/* 铺开导航菜单 */}
     </>
   )
