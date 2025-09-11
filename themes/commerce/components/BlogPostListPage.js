@@ -23,7 +23,7 @@ const BlogPostListPage = ({ page = 1, posts = [], postCount, siteInfo }) => {
     return (
       <div id='container' className='w-full'>
         {/* 文章列表 */}
-        <div className='py-4 gap-4 grid grid-cols-3'>
+        <div className='py-4 gap-4 grid grid-cols-6'>
           {posts?.map(post => (
             <ProductCard
               index={posts.indexOf(post)}
