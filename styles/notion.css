@@ -928,15 +928,15 @@ code[class*='language-'] {
 }
 
 .notion-callout {
-  padding: 12px 12px 12px 6px;
+  padding: 12px 12px 12px 6px !important;
   display: inline-flex;
   width: 100%;
-  border-radius: 6px;
+  border-radius: 6px !important;
   border-width: 1px;
   align-items: center;
   box-sizing: border-box;
   margin: 4px 0;
-  border: 1.5px solid var(--fg-color-0);
+  border: 1.5px solid var(--fg-color-0) !important;
 }
 
 .dark-mode .notion-callout {
