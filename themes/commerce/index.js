@@ -142,7 +142,9 @@ const LayoutIndex = props => {
         <div className='bg-white border-[#D2232A] p-4 mt-2 mb-4'>
           <div className='text-lg font-bold border-b-2 py-2 border-[#D2232A]'> 
             <i className='fas fa-history'/>
-            {locale.COMMON.RECENT_POSTS}
+              <div className='notion-callout-text'>
+                {locale.COMMON.RECENT_POSTS}
+              </div>
           </div>
           {siteConfig('POST_LIST_STYLE') === 'page' ? (
             <BlogPostListPage
