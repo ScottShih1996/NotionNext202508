@@ -140,11 +140,9 @@ const LayoutIndex = props => {
       {/* 最近新增的文章 */}
       {latestPosts && latestPosts.length > 0 && (
         <div className='bg-white border-[#D2232A] p-4 mt-2 mb-4'>
-          <div className='text-lg font-bold border-b-2 py-2 border-[#D2232A]'> 
+          <div className='notion-callout-text text-lg font-bold border-b-2 py-2 border-[#D2232A]'> 
             <i className='fas fa-history'/>
-              <div className='notion-callout-text'>
                 {locale.COMMON.RECENT_POSTS}
-              </div>
           </div>
           {siteConfig('POST_LIST_STYLE') === 'page' ? (
             <BlogPostListPage
