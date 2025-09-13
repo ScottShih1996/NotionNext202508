@@ -141,7 +141,7 @@ const LayoutIndex = props => {
       {latestPosts && latestPosts.length > 0 && (
         <div className='bg-white border-[#D2232A] p-4 mt-2 mb-4'>
           <div className='notion-callout-text text-lg font-bold border-b-2 py-2 border-[#D2232A]'> 
-            <i className='fas fa-history'/>
+            <i className='fas fa-history mr-1'/>
                 {locale.COMMON.RECENT_POSTS}
           </div>
           {siteConfig('POST_LIST_STYLE') === 'page' ? (
