@@ -7,6 +7,7 @@ import CONFIG from '../config'
 import LogoBar from './LogoBar'
 import { MenuBarMobile } from './MenuBarMobile'
 import { MenuItemDrop } from './MenuItemDrop'
+import SearchButton from './SearchButton'
 
 /**
  * 顶部导航栏 + 菜单
@@ -20,6 +21,15 @@ export default function Header(props) {
 
   const { locale } = useGlobal()
 
+  // 展示搜索框
+  const toggleShowSearchInput = () => {
+    if (siteConfig('ALGOLIA_APP_ID')) {
+      searchModal.current.openSearch()
+    } else {
+      changeShowSearchInput(!showSearchInput)
+    }
+  }
+  
   const defaultLinks = [
     {
       icon: 'fas fa-th',
@@ -38,12 +48,6 @@ export default function Header(props) {
       name: locale.NAV.ARCHIVE,
       href: '/archive',
       show: CONFIG.MENU_ARCHIVE
-    },
-    {
-      icon: 'fas fa-search',
-      name: locale.NAV.SEARCH,
-      href: '/search',
-      show: CONFIG.MENU_SEARCH
     }
   ]
 
@@ -100,6 +104,7 @@ export default function Header(props) {
 
         {/* 移动端折叠按钮 */}
         <div className='mr-1 flex md:hidden justify-end items-center text-lg space-x-4 font-serif dark:text-gray-200'>
+          <SearchButton {...props} />
           <div onClick={toggleMenuOpen} className='cursor-pointer'>
             {isOpen ? (
               <i className='fas fa-times' />
@@ -113,6 +118,7 @@ export default function Header(props) {
         <div className='hidden md:flex items-center'>
           {links &&
             links?.map(link => <MenuItemDrop key={link?.id} link={link} />)}
+          <SearchButton {...props} />
         </div>
       </div>
 
