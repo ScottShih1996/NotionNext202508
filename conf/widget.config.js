@@ -18,7 +18,7 @@ module.exports = {
   FLOATING_WINDOW_ENABLED:
     process.env.NEXT_PUBLIC_FLOATING_WINDOW_ENABLED || true,
   FLOATING_WINDOW_PAGE_ID:
-    process.env.NEXT_PUBLIC_FLOATING_WINDOW_PAGE_ID || '',
+    process.env.NEXT_PUBLIC_FLOATING_WINDOW_PAGE_ID || null,
 
   
   // 悬浮挂件
