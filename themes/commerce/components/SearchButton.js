@@ -29,9 +29,9 @@ export default function SearchButton(props) {
         onClick={handleSearch}
         title={locale.NAV.SEARCH}
         alt={locale.NAV.SEARCH}
-        className='flex justify-center items-center w-7 h-7 cursor-pointer transform hover:scale-105 duration-200 text-gray-500 dark:text-gray-200'
-      >
-        <i className='fa-solid fa-magnifying-glass' />
+        className='flex justify-center items-center w-7 h-7 cursor-pointer transform hover:scale-105 duration-200 dark:text-gray-200 mr-1 flex text-lg space-x-4 font-serif'
+      >         
+        <i className='fa-solid fa-magnifying-glass' /> <p class="list-inline-item">搜尋</p>
       </div>
       <AlgoliaSearchModal cRef={searchModal} {...props} />
     </>
