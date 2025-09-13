@@ -43,7 +43,7 @@ const FloatingWindow = () => {
           <input type='checkbox' className='mr-1' onChange={handleCheck} />
           今日不要再顯示
         </label>
-        <button onClick={handleClose} aria-label='close'>✕</button>
+        <button onClick={handleClose} aria-label='close' className='font-bold'>✕</button>
       </div>
       <NotionRenderer recordMap={blockMap} />
     </div>
