@@ -16,6 +16,7 @@ export default function ProductCategories(props) {
             CONFIG
           )}
         </div>
+        <SearchButton {...props} />
         <nav
           id='home-nav-button'
           className={'flex flex-col space-y-2 text-start'}>
