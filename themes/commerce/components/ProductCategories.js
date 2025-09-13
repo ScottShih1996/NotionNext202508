@@ -11,6 +11,13 @@ export default function ProductCategories(props) {
       {/* 分类菜单  */}
       <div className='bg-white  p-4'>
         <div className='font-bold text-lg mb-4 border-b-2 py-2 border-[#D2232A]'>
+        <SearchButton {...props} />
+    </div>
+    
+    <div className='hidden md:block w-36 mx-2'>
+      {/* 分类菜单  */}
+      <div className='bg-white  p-4'>
+        <div className='font-bold text-lg mb-4 border-b-2 py-2 border-[#D2232A]'>
           {siteConfig(
             'COMMERCE_TEXT_CENTER_CATEGORY_TITLE',
             'Product Categories',
