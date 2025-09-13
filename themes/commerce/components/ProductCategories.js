@@ -1,6 +1,7 @@
 import { siteConfig } from '@/lib/config'
 import SmartLink from '@/components/SmartLink'
 import CONFIG from '../config'
+import SearchButton from './SearchButton'
 
 export default function ProductCategories(props) {
   const { categoryOptions } = props
