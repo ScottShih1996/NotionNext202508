@@ -29,7 +29,7 @@ export default function SearchButton(props) {
         onClick={handleSearch}
         title={locale.NAV.SEARCH}
         alt={locale.NAV.SEARCH}
-        className='flex items-center whitespace-nowrap cursor-pointer transform hover:scale-105 duration-200 dark:text-gray-200 mr-1 flex space-x-4'
+        className='h-full flex space-x-1 whitespace-nowrap items-center cursor-pointer font-sans menu-link pl-2 pr-4 cursor-pointer transform hover:scale-105 duration-200 dark:text-gray-200 mr-1'
       >         
         <i className='fa-solid fa-magnifying-glass' /> <p>搜尋</p>
       </div>
