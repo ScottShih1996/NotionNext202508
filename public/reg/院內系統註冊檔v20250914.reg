@@ -100,3 +100,12 @@ Windows Registry Editor Version 5.00
 [HKEY_CLASSES_ROOT\ISP\shell\open\command]
 @="\"C:\\isp\\bin\\systemftp_New.exe\" \"%1\""
 
+#心導管整合系統
+[-HKEY_CLASSES_ROOT\Cathlist]
+[HKEY_CLASSES_ROOT\Cathlist]
+"URL Protocol"=""
+@="URL:Cathlist
+[HKEY_CLASSES_ROOT\Cathlist\shell]
+[HKEY_CLASSES_ROOT\Cathlist\shell\open]
+[HKEY_CLASSES_ROOT\Cathlist\shell\open\command]
+@="\"C:\\Cathlist\\systemftp.exe\" \"%1\""
