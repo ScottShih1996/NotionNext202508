@@ -11,7 +11,12 @@ export default async function handler(
   }
 
   try {
-    const response = await fetch(url)
+    const response = await fetch(url, {
+      headers: {
+        'User-Agent':
+          'Mozilla/5.0 (compatible; NotionNext/1.0; +https://github.com/tangly1024/NotionNext)'
+      }
+    })
     const html = await response.text()
     const getMeta = (property: string): string | undefined => {
       const regex = new RegExp(
@@ -26,11 +31,12 @@ export default async function handler(
       getMeta('title') || html.match(/<title>([^<]*)<\/title>/i)?.[1] || ''
     const description = getMeta('description') || ''
     const image = getMeta('image')
+    const imageUrl = image ? new URL(image, url).toString() : undefined
 
     res.status(200).json({
       title,
       description,
-      images: image ? [image] : []
+      images: imageUrl ? [imageUrl] : []
     })
   } catch (err) {
     res.status(500).json({ error: 'Failed to fetch metadata' })
