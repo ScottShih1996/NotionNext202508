@@ -23,7 +23,7 @@ const BLOG = {
   
   
   
-  API_BASE_URL: process.env.API_BASE_URL || 'https://d34234.notion.so/api/v3', // API默认请求地址 ,可配置成自己的 https://<xxxx>.notion.site/api/v3
+  API_BASE_URL: process.env.API_BASE_URL || 'https://d34234.notion.site/api/v3', // API默认请求地址 ,可配置成自己的 https://<xxxx>.notion.site/api/v3
   // RSS订阅
   ENABLE_RSS: process.env.NEXT_PUBLIC_ENABLE_RSS || true, // 是否开启RSS订阅功能
 
