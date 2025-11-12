@@ -4,6 +4,19 @@ import { checkStrIsNotionId, getLastPartOfUrl } from '@/lib/utils'
 import { idToUuid } from 'notion-utils'
 import BLOG from './blog.config'
 
+
+
+export function middleware(req: NextRequest) {
+  const host = req.headers.get('host') || ''
+  if (host.startsWith('www.')) {
+    const url = new URL(req.url)
+    url.host = host.slice(4) // 去掉 www.
+    return NextResponse.redirect(url, 301)
+  }
+  return NextResponse.next()
+}
+
+
 /**
  * Clerk 身份验证中间件
  */
