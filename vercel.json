@@ -2,4 +2,13 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "headers": []
+  "redirects": [
+    {
+      "has": [{ "type": "host", "value": "www.cmuhdnr.vercel.app" }],
+      "source": "/:path*",
+      "destination": "https://cmuhdnr.vercel.app/:path*",
+      "permanent": true
+    }
+  ]
+  
 }
