@@ -16,12 +16,21 @@
 
   <script>
     function openImage() {
-      const pid = document.getElementById('pid').value.trim();
-      if (!pid) return;
+      const raw = document.getElementById('pid').value.trim();
+      if (!raw) return;
+
+      // 只取數字部分
+      const pid = raw.replace(/\D/g, '');  // \D 代表「非數字」，全部換成空字串
+
+      if (!pid) {
+        alert('未偵測到數字員工代號，請重新輸入。');
+        return;
+      }
 
       const url = `http://10.20.8.117/personpic/${pid}.jpg`;
       window.open(url, '_blank');
     }
   </script>
+  
 </body>
 </html>
